@@ -1,78 +1,81 @@
 # live-events-of-coc-web
 
 
-# 🔥 Clash of Clans – Daily Events Dashboard
+# 🔥 Clash of Clans – Fan Dashboard
 
-A modern, animated, and responsive web dashboard inspired by Clash of Clans.
+A modern, animated fan-made dashboard inspired by Clash of Clans.
 
-This project displays:
-- 🟢 Live Event Section
-- 🔥 Latest Updates Section
-- 🎨 Animated Gaming Background
-- 💡 Interactive UI with CSS animations
+This project showcases a gaming-style UI built using pure HTML and CSS with advanced animations and responsive design.
 
 ---
 
-## 🚀 Features
+## 🚀 Live Demo
+(You can add your GitHub Pages link here later)
 
-✅ Fully Animated Background (Moving Gradient + Glow Effects)  
-✅ LIVE Event Badge with Blinking Indicator  
-✅ Premium Gaming UI Design  
-✅ Responsive Layout  
-✅ Clean & Structured Code  
-✅ Modern CSS Animations  
+---
+
+## 🎯 Features
+
+- 🟢 LIVE event section with animated badge
+- 🎨 Dynamic animated gradient background
+- 🔥 Glowing gaming-style UI components
+- 📱 Fully responsive layout
+- 🔗 Official Clash of Clans page links
+- ⚠️ Professional disclaimer included
 
 ---
 
 ## 🛠️ Technologies Used
 
-- HTML5  
-- CSS3 (Advanced Animations & Effects)  
-- Google Fonts (Poppins)  
+- HTML5
+- CSS3
+- Flexbox
+- CSS Animations
+- Google Fonts (Poppins)
 
 ---
 
-## 🎯 Project Purpose
+## 💡 What I Learned
 
-This project was built to:
-
-- Practice advanced CSS animations
-- Create modern gaming-style UI
-- Improve front-end development skills
-- Build portfolio-ready web design
-
----
-
-## 📸 Preview
-
-> Live event card with animated badge  
-> Smooth glowing background  
-> Gaming themed update section  
+- Advanced CSS animations
+- Creating modern UI without JavaScript
+- Responsive layout design
+- Structuring clean front-end code
+- Building portfolio-ready projects
 
 ---
 
-## 📂 How to Run
+## 📂 How to Run Locally
 
-1. Download or clone the repository
+1. Download or clone this repository
 2. Open `index.html`
-3. Run in browser
+3. Run in your browser
 
 ---
 
 ## 🌟 Future Improvements
 
-- ⏳ Real Countdown Timer (JavaScript)
-- 📊 Live Progress Bar System
-- 🐉 Animated Background Effects
-- 🎮 Game-style Popup Modal
+- ⏳ Real-time countdown timer
+- 📊 Animated progress bar
+- 🎮 Interactive popup modals
+- 🌙 Dark/Light theme toggle
+- ⚡ JavaScript-powered live updates
+
+---
+
+## ⚠️ Disclaimer
+
+This is a fan-made project for educational and portfolio purposes only.  
+Clash of Clans is owned by Supercell.
 
 ---
 
 ## 👨‍💻 Author
 
 **Arun Deep**  
-Frontend Developer | UI Designer | Programmer  
+Frontend Developer | UI Designer  
+Passionate about building modern web interfaces.
 
 ---
 
-If you like this project, consider giving it a ⭐ on GitHub!
+⭐ If you like this project, feel free to star the repository!
