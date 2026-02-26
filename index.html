@@ -7,31 +7,33 @@
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-  
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= VIDEO BACKGROUND ================= -->
+<!-- VIDEO BACKGROUND -->
 <video autoplay muted loop playsinline class="bg-video">
   <source src="background.mp4" type="video/mp4">
 </video>
 
-<!-- Dark Overlay -->
 <div class="overlay"></div>
 
-<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
-  <div class="nav-logo">COC Fan Hub</div>
+  <div class="nav-logo">
+    <i class="fa-solid fa-shield-halved"></i> COC Fan Hub
+  </div>
   <div class="nav-links">
-    <a href="#live">Live Event</a>
-    <a href="#updates">Updates</a>
-    <a href="#official">Official Links</a>
+    <a href="#live"><i class="fa-solid fa-bolt"></i> Live</a>
+    <a href="#updates"><i class="fa-solid fa-arrows-rotate"></i> Updates</a>
+    <a href="#official"><i class="fa-solid fa-link"></i> Official</a>
   </div>
 </nav>
 
-<!-- ================= MAIN CONTENT ================= -->
 <div class="container">
 
   <h1 class="logo">Clash of Clans</h1>
@@ -42,46 +44,56 @@
 
     <div class="live-header">
       <span class="live-dot"></span>
-      <span class="live-text">LIVE NOW</span>
+      <span class="live-text">LIVE EVENT</span>
     </div>
 
-    <h2>UNLEASH THE DUKE – Community Event</h2>
+    <h2><i class="fa-solid fa-fire"></i> UNLEASH THE DUKE</h2>
 
     <p>
-      Collect Dark Elixir together and unlock dungeon gates.
-      Join the battle before time runs out!
+      Collect Dark Elixir and unlock dungeon gates together!
     </p>
 
-    <button>View Event</button>
+    <button class="live-btn">
+      <i class="fa-solid fa-circle-play"></i> Watch Live
+    </button>
 
   </section>
 
   <!-- UPDATES -->
   <section id="updates" class="update-box">
 
-    <h2>🔥 Latest Update Highlights</h2>
+    <h2><i class="fa-solid fa-star"></i> Latest Update</h2>
 
-    <p>• New Hero: Dragon Duke joins the battlefield.</p>
-    <p>• Greedy Raven Pet deals 5x damage to resources.</p>
-    <p>• Reworked Gold Pass rewards system.</p>
-    <p>• Earthquake Spell Tower improvements.</p>
-    <p>• Balance changes and new troop levels.</p>
+    <p><i class="fa-solid fa-dragon"></i> New Hero: Dragon Duke</p>
+    <p><i class="fa-solid fa-coins"></i> Greedy Raven Pet Added</p>
+    <p><i class="fa-solid fa-gift"></i> Gold Pass Reworked</p>
+    <p><i class="fa-solid fa-bomb"></i> Earthquake Tower Buffed</p>
 
   </section>
 
   <!-- OFFICIAL LINKS -->
   <section id="official" class="official-links">
 
-    <h2>🔗 Official Pages</h2>
+    <h2><i class="fa-solid fa-globe"></i> Official Links</h2>
 
-    <a href="https://clashofclans.com/" target="_blank">Official Website</a>
-    <a href="https://supercell.com/en/games/clashofclans/" target="_blank">Supercell Page</a>
-    <a href="https://twitter.com/ClashofClans" target="_blank">Twitter (X)</a>
-    <a href="https://www.youtube.com/@ClashofClans" target="_blank">YouTube</a>
+    <a href="https://clashofclans.com/" target="_blank" class="app-btn">
+      <i class="fa-solid fa-earth-americas"></i> Website
+    </a>
+
+    <a href="https://supercell.com/en/games/clashofclans/" target="_blank" class="app-btn">
+      <i class="fa-solid fa-building"></i> Supercell
+    </a>
+
+    <a href="https://twitter.com/ClashofClans" target="_blank" class="app-btn">
+      <i class="fa-brands fa-x-twitter"></i> Twitter
+    </a>
+
+    <a href="https://www.youtube.com/@ClashofClans" target="_blank" class="app-btn">
+      <i class="fa-brands fa-youtube"></i> YouTube
+    </a>
 
   </section>
 
-  <!-- DISCLAIMER -->
   <p class="disclaimer">
     This is a fan-made project. Clash of Clans is owned by Supercell.
   </p>
