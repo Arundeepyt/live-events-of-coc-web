@@ -7,26 +7,39 @@
 body {
   font-family: "Poppins", sans-serif;
   color: white;
-  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #3a1c71);
-  background-size: 400% 400%;
-  animation: gradientMove 12s ease infinite;
   overflow-x: hidden;
 }
 
-/* Animated Background */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* ================= VIDEO BACKGROUND ================= */
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
 }
 
-/* NAVBAR */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.8));
+  z-index: -1;
+}
+
+/* ================= NAVBAR ================= */
+
 .navbar {
   position: fixed;
-  width: 100%;
   top: 0;
-  background: rgba(0,0,0,0.8);
+  width: 100%;
   padding: 15px 50px;
+  background: rgba(0,0,0,0.8);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +64,8 @@ body {
   color: #ffcc00;
 }
 
-/* CONTAINER */
+/* ================= CONTAINER ================= */
+
 .container {
   padding-top: 120px;
   max-width: 1100px;
@@ -74,9 +88,10 @@ body {
   opacity: 0.8;
 }
 
-/* LIVE CARD */
+/* ================= LIVE CARD ================= */
+
 .card {
-  background: rgba(20,20,40,0.95);
+  background: rgba(20,20,40,0.85);
   padding: 40px;
   border-radius: 20px;
   margin-bottom: 60px;
@@ -106,6 +121,12 @@ body {
   100% {opacity:1;}
 }
 
+.live-text {
+  color: #ff3b3b;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
 button {
   padding: 12px 25px;
   border-radius: 30px;
@@ -120,9 +141,10 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* UPDATE BOX */
+/* ================= UPDATE BOX ================= */
+
 .update-box {
-  background: rgba(10,10,25,0.95);
+  background: rgba(10,10,25,0.85);
   padding: 50px;
   border-radius: 25px;
   margin-bottom: 60px;
@@ -139,7 +161,8 @@ button:hover {
   line-height: 1.6;
 }
 
-/* OFFICIAL LINKS */
+/* ================= OFFICIAL LINKS ================= */
+
 .official-links {
   margin-bottom: 50px;
 }
@@ -165,14 +188,16 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* DISCLAIMER */
+/* ================= DISCLAIMER ================= */
+
 .disclaimer {
   opacity: 0.6;
   font-size: 14px;
   margin-bottom: 40px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
+
 @media(max-width:768px) {
   .navbar {
     flex-direction: column;
@@ -180,5 +205,9 @@ button:hover {
 
   .nav-links {
     margin-top: 10px;
+  }
+
+  .logo {
+    font-size: 36px;
   }
 }
