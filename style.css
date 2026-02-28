@@ -1,35 +1,41 @@
+/* ===============================
+   GLOBAL RESET
+================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
 }
 
 body {
   min-height: 100vh;
-  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1c1c1c);
-  background-size: 400% 400%;
-  animation: gradientMove 10s ease infinite;
-  color: white;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0f2027);
+  background-size: 200% 200%;
+  animation: gradientMove 12s ease infinite;
+  color: #f1f5f9;
   text-align: center;
+  letter-spacing: 0.5px;
 }
 
-/* Background animation */
+/* Smooth background animation */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* HEADER */
+/* ===============================
+   HEADER
+================================= */
 header {
-  padding: 40px 20px;
+  padding: 60px 20px 30px;
 }
 
-/* Animated title */
 .main-title {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .title-animated {
@@ -40,15 +46,17 @@ header {
 
 .subtitle-animated {
   display: block;
-  font-size: 1.6rem;
-  background: linear-gradient(90deg,#ff0000,#ff9900,#ffff00);
+  font-size: 1.4rem;
+  font-weight: 500;
+  background: linear-gradient(90deg,#ff6b6b,#feca57,#48dbfb);
+  background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 3s linear infinite;
+  animation: shine 4s linear infinite;
 }
 
 @keyframes slideDown {
-  from { transform: translateY(-40px); opacity: 0; }
+  from { transform: translateY(-30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
@@ -57,96 +65,124 @@ header {
   100% { background-position: 200%; }
 }
 
-/* NAV */
+/* ===============================
+   NAVIGATION
+================================= */
 nav {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 nav a {
-  margin: 0 12px;
+  margin: 0 15px;
   text-decoration: none;
-  color: #ffcc00;
-  font-weight: bold;
+  color: #94a3b8;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  bottom: -5px;
+  left: 0;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #00ffff;
+  color: #38bdf8;
 }
 
-/* LIVE TITLE */
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   LIVE TITLE
+================================= */
 .live-title {
-  margin-top: 40px;
-  font-size: 1.8rem;
+  margin-top: 50px;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .live-badge {
-  background: red;
-  color: white;
-  padding: 5px 12px;
-  margin-left: 10px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  animation: blink 1s infinite;
+  background: linear-gradient(45deg,#ef4444,#dc2626);
+  padding: 6px 14px;
+  margin-left: 12px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 15px rgba(239,68,68,0.6);
 }
 
-/* Blinking red */
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
-/* COUNTDOWN */
+/* ===============================
+   COUNTDOWN (Figma Glass Cards)
+================================= */
 .countdown-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin: 30px 0;
+  gap: 25px;
+  margin: 40px 0;
   flex-wrap: wrap;
 }
 
 .time-box {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  min-width: 100px;
-  transition: 0.3s;
+  background: rgba(255,255,255,0.08);
+  padding: 25px 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  min-width: 110px;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 8px 32px rgba(0,0,0,0.4),
+    inset 0 0 10px rgba(255,255,255,0.05);
 }
 
 .time-box:hover {
-  transform: scale(1.1);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
 }
 
 .time-box span {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.2rem;
+  font-weight: 700;
+  display: block;
 }
 
-/* HERO IMAGE */
+/* ===============================
+   HERO IMAGE
+================================= */
 .hero-container {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 #heroImage {
-  width: 250px;
-  opacity: 0.9;
-  transition: 0.8s ease;
-  filter: drop-shadow(0 0 20px gold);
+  width: 260px;
+  transition: all 0.6s ease;
+  filter: drop-shadow(0 0 25px rgba(255,215,0,0.6));
 }
 
 #heroImage:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 50px orange);
+  transform: scale(1.08) rotate(2deg);
+  filter: drop-shadow(0 0 60px orange);
 }
 
-/* FLASH EFFECT */
+/* ===============================
+   FLASH EFFECT
+================================= */
 #flash {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: white;
   opacity: 0;
   pointer-events: none;
@@ -161,9 +197,14 @@ nav a:hover {
   100% { opacity: 0; }
 }
 
-/* FOOTER */
+/* ===============================
+   FOOTER
+================================= */
 footer {
-  margin-top: 50px;
-  padding: 20px;
-  background: rgba(0,0,0,0.4);
+  margin-top: 60px;
+  padding: 25px;
+  background: rgba(15,23,42,0.7);
+  backdrop-filter: blur(10px);
+  font-size: 0.9rem;
+  color: #94a3b8;
 }
