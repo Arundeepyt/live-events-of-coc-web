@@ -1,33 +1,54 @@
-<!-- ================= NEW HERO LIVE ARRIVAL ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clash of Clans - New Hero Arrival</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<section class="hero-arrival">
+<header>
+  <h1 class="main-title">
+    <span class="title-animated">⚔️ Clash of Clans</span>
+    <span class="subtitle-animated">New Hero Arrival</span>
+  </h1>
 
-  <div class="arrival-header">
-    <span class="arrival-dot"></span>
-    <span class="arrival-live">LIVE HERO ARRIVAL</span>
+  <nav>
+    <a href="https://clashofclans.com" target="_blank">Official</a>
+    <a href="https://twitter.com/ClashofClans" target="_blank">Twitter</a>
+    <a href="https://www.youtube.com/@ClashofClans" target="_blank">YouTube</a>
+  </nav>
+</header>
+
+<section class="event-section">
+
+  <h2 class="live-title">
+    🔥 Live Event Countdown
+    <span class="live-badge">LIVE TOMORROW</span>
+  </h2>
+
+  <div class="countdown-container">
+    <div class="time-box"><span id="days">0</span><p>Days</p></div>
+    <div class="time-box"><span id="hours">0</span><p>Hours</p></div>
+    <div class="time-box"><span id="minutes">0</span><p>Minutes</p></div>
+    <div class="time-box"><span id="seconds">0</span><p>Seconds</p></div>
   </div>
 
-  <h2 class="hero-title">🔥 SHADOW WARDEN ARRIVES 🔥</h2>
+  <div id="countdownMessage"></div>
 
-  <!-- HERO IMAGE -->
-  <div class="hero-image-wrapper">
-    <img src="hero.png" class="hero-image" id="heroImage" alt="DUKE DRAGON HERO">
+  <div class="hero-container">
+    <img src="hero.jpeg" id="heroImage" alt="New Hero">
   </div>
-
-  <p class="hero-desc">
-    Master of dark magic and battlefield domination.
-  </p>
-
-  <div class="countdown" id="countdown">
-    <div><span id="days">00</span><p>Days</p></div>
-    <div><span id="hours">00</span><p>Hours</p></div>
-    <div><span id="minutes">00</span><p>Minutes</p></div>
-    <div><span id="seconds">00</span><p>Seconds</p></div>
-  </div>
-
-  <button class="reveal-btn">⚔ Watch Reveal</button>
 
 </section>
 
-<!-- LIGHT FLASH EFFECT -->
-<div class="light-flash" id="lightFlash"></div>
+<div id="flash"></div>
+
+<footer>
+  <p>© 2026 Clash of Clans Fan Event | All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
