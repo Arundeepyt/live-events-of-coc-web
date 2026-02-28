@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clash of Clans - New Hero Arrival</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clash of Clans - New Hero Arrival</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-  <h1 class="main-title">⚔️ Clash of Clans</h1>
+  <h1 class="main-title">
+    ⚔️ Clash of Clans
+  </h1>
   <p class="subtitle-animated">New Hero Arrival</p>
-
-  <!-- Animated Emojis -->
-  <div class="hero-emojis">
-    <span>⚔️</span>
-    <span>🔥</span>
-    <span>🛡️</span>
-  </div>
 
   <nav>
     <a href="https://clashofclans.com" target="_blank">Official</a>
@@ -44,13 +42,19 @@
     <div class="time-box"><span id="seconds">0</span><p>Seconds</p></div>
   </div>
 
+  <div id="countdownMessage"></div>
+
   <div class="hero-container">
     <img src="hero.jpeg" id="heroImage" alt="New Hero">
   </div>
 
 </section>
 
+<div id="flash"></div>
+
+<!-- MODERN FOOTER -->
 <footer class="modern-footer">
+
   <div class="footer-top">
 
     <div class="footer-brand">
@@ -60,10 +64,23 @@
 
     <div class="footer-links">
       <h4>Official Links</h4>
-      <a href="https://clashofclans.com" target="_blank">Official Website</a>
-      <a href="https://twitter.com/ClashofClans" target="_blank">Twitter (X)</a>
-      <a href="https://www.youtube.com/@ClashofClans" target="_blank">YouTube</a>
-      <a href="https://www.instagram.com/clashofclans/" target="_blank">Instagram</a>
+
+      <a href="https://clashofclans.com" target="_blank">
+        <i class="fa-solid fa-globe"></i> Official Website
+      </a>
+
+      <a href="https://twitter.com/ClashofClans" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i> Twitter (X)
+      </a>
+
+      <a href="https://www.youtube.com/@ClashofClans" target="_blank">
+        <i class="fa-brands fa-youtube"></i> YouTube
+      </a>
+
+      <a href="https://www.instagram.com/clashofclans/" target="_blank">
+        <i class="fa-brands fa-instagram"></i> Instagram
+      </a>
+
     </div>
 
   </div>
@@ -71,7 +88,9 @@
   <div class="footer-bottom">
     © 2026 Clash of Clans Fan Event | Not affiliated with Supercell.
   </div>
+
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
