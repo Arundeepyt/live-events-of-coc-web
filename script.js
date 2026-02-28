@@ -1,5 +1,4 @@
-<script>
-const targetDate = new Date("March 10, 2026 18:00:00").getTime();
+const targetDate = new Date("March 1, 2026 18:00:00").getTime();
 
 const timer = setInterval(function() {
 
@@ -32,4 +31,3 @@ const timer = setInterval(function() {
   }
 
 }, 1000);
-</script>
