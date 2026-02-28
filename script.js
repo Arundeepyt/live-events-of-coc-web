@@ -1,33 +1,46 @@
-const targetDate = new Date("March 1, 2026 18:00:00").getTime();
+console.log("Script Loaded Successfully");
 
-const timer = setInterval(function() {
+document.addEventListener("DOMContentLoaded", function () {
 
-  const now = new Date().getTime();
-  const distance = targetDate - now;
+    // target: tomorrow at 08:00 local time
+    const now = new Date();
+    const target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 8, 0, 0, 0);
+    const targetDate = target.getTime();
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let interval;
 
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
+    function updateCountdown() {
 
-  if (distance < 0) {
-    clearInterval(timer);
+        const now = new Date().getTime();
+        const distance = targetDate - now;
 
-    document.getElementById("countdown").innerHTML = 
-      "<h2 style='color:#ff0066;'>🔥 HERO HAS ARRIVED! 🔥</h2>";
+        if (distance <= 0) {
+            clearInterval(interval);
 
-    // Trigger flash
-    const flash = document.getElementById("lightFlash");
-    flash.classList.add("light-active");
+            document.getElementById("countdownMessage").innerHTML =
+                "<h2>🔥 HERO HAS ARRIVED! 🔥</h2>";
 
-    // Extra glow effect on hero
-    document.getElementById("heroImage").style.filter =
-      "drop-shadow(0 0 60px #ffcc00)";
-  }
+            document.getElementById("flash").classList.add("active");
 
-}, 1000);
+            const hero = document.getElementById("heroImage");
+            hero.style.transform = "scale(1.2)";
+            hero.style.filter = "drop-shadow(0 0 100px gold)";
+
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+    }
+
+    updateCountdown();
+    interval = setInterval(updateCountdown, 1000);
+
+});
