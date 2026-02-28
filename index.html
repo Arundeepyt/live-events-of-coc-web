@@ -1,92 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Clash of Clans - Fan Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ================= NEW HERO LIVE ARRIVAL ================= -->
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
-</head>
+<section class="hero-arrival">
 
-<body>
-
-<!-- ================= VIDEO BACKGROUND ================= -->
-<video autoplay muted loop playsinline class="bg-video">
-  <source src="background.mp4" type="video/mp4">
-</video>
-
-<!-- Dark Overlay -->
-<div class="overlay"></div>
-
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-  <div class="nav-logo">COC Fan Hub</div>
-  <div class="nav-links">
-    <a href="#live">Live Event</a>
-    <a href="#updates">Updates</a>
-    <a href="#official">Official Links</a>
+  <div class="arrival-header">
+    <span class="arrival-dot"></span>
+    <span class="arrival-live">LIVE HERO ARRIVAL</span>
   </div>
-</nav>
 
-<!-- ================= MAIN CONTENT ================= -->
-<div class="container">
+  <h2 class="hero-title">🔥 SHADOW WARDEN ARRIVES 🔥</h2>
 
-  <h1 class="logo">Clash of Clans</h1>
-  <p class="subtitle">Fan-Made Live Dashboard</p>
+  <!-- HERO IMAGE -->
+  <div class="hero-image-wrapper">
+    <img src="hero.png" class="hero-image" id="heroImage">
+  </div>
 
-  <!-- LIVE EVENT -->
-  <section id="live" class="card live-card">
-
-    <div class="live-header">
-      <span class="live-dot"></span>
-      <span class="live-text">LIVE NOW</span>
-    </div>
-
-    <h2>UNLEASH THE DUKE – Community Event</h2>
-
-    <p>
-      Collect Dark Elixir together and unlock dungeon gates.
-      Join the battle before time runs out!
-    </p>
-
-    <button>View Event</button>
-
-  </section>
-
-  <!-- UPDATES -->
-  <section id="updates" class="update-box">
-
-    <h2>🔥 Latest Update Highlights</h2>
-
-    <p>• New Hero: Dragon Duke joins the battlefield.</p>
-    <p>• Greedy Raven Pet deals 5x damage to resources.</p>
-    <p>• Reworked Gold Pass rewards system.</p>
-    <p>• Earthquake Spell Tower improvements.</p>
-    <p>• Balance changes and new troop levels.</p>
-
-  </section>
-
-  <!-- OFFICIAL LINKS -->
-  <section id="official" class="official-links">
-
-    <h2>🔗 Official Pages</h2>
-
-    <a href="https://clashofclans.com/" target="_blank">Official Website</a>
-    <a href="https://supercell.com/en/games/clashofclans/" target="_blank">Supercell Page</a>
-    <a href="https://twitter.com/ClashofClans" target="_blank">Twitter (X)</a>
-    <a href="https://www.youtube.com/@ClashofClans" target="_blank">YouTube</a>
-
-  </section>
-
-  <!-- DISCLAIMER -->
-  <p class="disclaimer">
-    This is a fan-made project. Clash of Clans is owned by Supercell.
+  <p class="hero-desc">
+    Master of dark magic and battlefield domination.
   </p>
 
-</div>
+  <div class="countdown" id="countdown">
+    <div><span id="days">00</span><p>Days</p></div>
+    <div><span id="hours">00</span><p>Hours</p></div>
+    <div><span id="minutes">00</span><p>Minutes</p></div>
+    <div><span id="seconds">00</span><p>Seconds</p></div>
+  </div>
 
-</body>
-</html>
+  <button class="reveal-btn">⚔ Watch Reveal</button>
+
+</section>
+
+<!-- LIGHT FLASH EFFECT -->
+<div class="light-flash" id="lightFlash"></div>
