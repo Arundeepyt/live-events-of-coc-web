@@ -1,258 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Clash of Clans - Live Event</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clash of Clans - New Hero Arrival</title>
+
+<meta name="description" content="Clash of Clans New Hero Arrival Live Countdown Event">
+<meta name="author" content="Arun Deep">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Inter",sans-serif;
-}
-
-body{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  text-align:center;
-  color:white;
-  background:linear-gradient(135deg,#ff416c,#6c5ce7,#00cec9);
-  background-size:300% 300%;
-  animation:gradientMove 10s ease infinite;
-  overflow-x:hidden;
-}
-
-@keyframes gradientMove{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
-
-/* MAIN SECTION */
-.event-section{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-}
-
-/* HEADER */
-header{
-  padding:30px 15px 10px;
-}
-
-.main-title{
-  font-size:2.2rem;
-  font-weight:800;
-}
-
-.subtitle{
-  font-size:1rem;
-  opacity:0.9;
-  margin-top:5px;
-}
-
-/* NAV */
-nav{
-  margin-top:15px;
-}
-
-nav a{
-  margin:0 10px;
-  text-decoration:none;
-  color:white;
-  font-weight:600;
-  font-size:0.9rem;
-  transition:0.3s;
-}
-
-nav a:hover{
-  opacity:0.7;
-}
-
-/* LIVE TITLE */
-.live-title{
-  margin-top:25px;
-  font-size:1.2rem;
-  font-weight:600;
-}
-
-/* COUNTDOWN */
-.countdown-container{
-  display:flex;
-  gap:12px;
-  margin:25px 0;
-}
-
-.time-box{
-  background:rgba(255,255,255,0.18);
-  padding:15px 14px;
-  border-radius:18px;
-  min-width:70px;
-  backdrop-filter:blur(15px);
-  transition:0.3s;
-}
-
-.time-box:hover{
-  transform:translateY(-5px);
-  background:rgba(255,255,255,0.25);
-}
-
-.time-box span{
-  font-size:1.6rem;
-  font-weight:800;
-}
-
-.time-box p{
-  font-size:0.75rem;
-  opacity:0.85;
-}
-
-/* HERO IMAGE */
-.hero-container{
-  margin-top:10px;
-}
-
-#heroImage{
-  width:230px;
-  max-width:90%;
-  border-radius:18px;
-  box-shadow:0 0 25px rgba(255,120,0,0.8);
-  animation:fireGlow 2s infinite alternate;
-}
-
-@keyframes fireGlow{
-  from{box-shadow:0 0 15px rgba(255,100,0,0.6);}
-  to{box-shadow:0 0 35px rgba(255,140,0,1);}
-}
-
-/* BUTTON */
-.cta-btn{
-  margin-top:25px;
-  padding:12px 28px;
-  border:none;
-  border-radius:30px;
-  font-weight:700;
-  font-size:0.9rem;
-  cursor:pointer;
-  background:white;
-  color:#6c5ce7;
-  transition:0.3s;
-}
-
-.cta-btn:hover{
-  transform:scale(1.05);
-}
-
-/* FOOTER */
-footer{
-  padding:15px 10px;
-  font-size:0.75rem;
-  background:rgba(0,0,0,0.25);
-  backdrop-filter:blur(10px);
-}
-
-/* MOBILE FIX */
-@media(max-width:768px){
-  .main-title{
-    font-size:1.8rem;
-  }
-
-  .countdown-container{
-    gap:8px;
-  }
-
-  .time-box{
-    padding:12px 10px;
-    min-width:60px;
-  }
-
-  #heroImage{
-    width:200px;
-  }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- Particles -->
+<div class="particles">
+  <span style="left:5%; animation-delay:0s;"></span>
+  <span style="left:20%; animation-delay:3s;"></span>
+  <span style="left:35%; animation-delay:6s;"></span>
+  <span style="left:50%; animation-delay:9s;"></span>
+  <span style="left:65%; animation-delay:12s;"></span>
+  <span style="left:80%; animation-delay:15s;"></span>
+  <span style="left:95%; animation-delay:18s;"></span>
+</div>
+
 <header>
-  <div class="main-title">⚔ Clash of Clans</div>
-  <div class="subtitle">New Hero Arrival</div>
+  <h1 class="main-title">
+    <span class="title-animated">⚔️ Clash of Clans</span>
+    <span class="subtitle-animated">New Hero Arrival</span>
+  </h1>
 
   <nav>
-    <a href="#">Official</a>
-    <a href="#">Twitter</a>
-    <a href="#">YouTube</a>
+    <a href="https://clashofclans.com" target="_blank">Official</a>
+    <a href="https://twitter.com/ClashofClans" target="_blank">Twitter</a>
+    <a href="https://www.youtube.com/@ClashofClans" target="_blank">YouTube</a>
   </nav>
 </header>
 
 <section class="event-section">
 
-  <div class="live-title">🔥 Live Event Countdown</div>
+  <h2 class="live-title">
+    🔥 Live Event Countdown
+    <span class="live-badge">LIVE TOMORROW</span>
+  </h2>
 
   <div class="countdown-container">
-    <div class="time-box">
-      <span id="days">0</span>
-      <p>Days</p>
-    </div>
-    <div class="time-box">
-      <span id="hours">0</span>
-      <p>Hours</p>
-    </div>
-    <div class="time-box">
-      <span id="minutes">0</span>
-      <p>Minutes</p>
-    </div>
-    <div class="time-box">
-      <span id="seconds">0</span>
-      <p>Seconds</p>
-    </div>
+    <div class="time-box"><span id="days">0</span><p>Days</p></div>
+    <div class="time-box"><span id="hours">0</span><p>Hours</p></div>
+    <div class="time-box"><span id="minutes">0</span><p>Minutes</p></div>
+    <div class="time-box"><span id="seconds">0</span><p>Seconds</p></div>
   </div>
+
+  <div id="countdownMessage"></div>
 
   <div class="hero-container">
-    <img id="heroImage" src="https://i.imgur.com/YOURIMAGE.png" alt="New Hero">
+    <img src="hero.jpeg" id="heroImage" alt="Clash of Clans New Hero">
   </div>
-
-  <button class="cta-btn">Watch Live</button>
 
 </section>
 
+<div id="flash"></div>
+
 <footer>
-  © 2026 Clash Fan Event | Designed by You
+  <p>© 2026 Clash of Clans Fan Event | Designed by Arun Deep</p>
 </footer>
 
-<script>
-// SET EVENT DATE (CHANGE THIS)
-const eventDate = new Date("March 1, 2026 18:00:00").getTime();
-
-const timer = setInterval(function(){
-  const now = new Date().getTime();
-  const distance = eventDate - now;
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-
-  if(distance < 0){
-    clearInterval(timer);
-    document.querySelector(".countdown-container").innerHTML = "🔥 WE ARE LIVE!";
-  }
-},1000);
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
