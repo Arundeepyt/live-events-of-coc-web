@@ -10,15 +10,14 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a, #1e293b, #0f2027);
-  background-size: 200% 200%;
+  background: linear-gradient(-45deg, #ff6b6b, #6c5ce7, #00cec9, #feca57);
+  background-size: 400% 400%;
   animation: gradientMove 12s ease infinite;
-  color: #f1f5f9;
+  color: white;
   text-align: center;
-  letter-spacing: 0.5px;
 }
 
-/* Smooth background animation */
+/* Smooth animated gradient */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -34,30 +33,17 @@ header {
 
 .main-title {
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 
-.title-animated {
-  display: block;
-  animation: slideDown 1s ease forwards;
-  opacity: 0;
-}
-
 .subtitle-animated {
-  display: block;
   font-size: 1.4rem;
-  font-weight: 500;
-  background: linear-gradient(90deg,#ff6b6b,#feca57,#48dbfb);
+  background: linear-gradient(90deg,#ffffff,#ffeaa7,#ffffff);
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 4s linear infinite;
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  animation: shine 3s linear infinite;
 }
 
 @keyframes shine {
@@ -66,7 +52,7 @@ header {
 }
 
 /* ===============================
-   NAVIGATION
+   NAV
 ================================= */
 nav {
   margin-top: 20px;
@@ -75,33 +61,20 @@ nav {
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #94a3b8;
+  color: white;
   font-weight: 600;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #38bdf8;
-  bottom: -5px;
-  left: 0;
+  padding: 6px 10px;
+  border-radius: 20px;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #38bdf8;
-}
-
-nav a:hover::after {
-  width: 100%;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
 }
 
 /* ===============================
-   LIVE TITLE
+   LIVE BADGE
 ================================= */
 .live-title {
   margin-top: 50px;
@@ -110,23 +83,23 @@ nav a:hover::after {
 }
 
 .live-badge {
-  background: linear-gradient(45deg,#ef4444,#dc2626);
+  background: linear-gradient(45deg,#ff0000,#ff6b6b);
   padding: 6px 14px;
   margin-left: 12px;
   border-radius: 30px;
   font-size: 0.8rem;
   animation: pulse 1.5s infinite;
-  box-shadow: 0 0 15px rgba(239,68,68,0.6);
+  box-shadow: 0 0 15px rgba(255,0,0,0.6);
 }
 
 @keyframes pulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  50% { transform: scale(1.15); }
   100% { transform: scale(1); }
 }
 
 /* ===============================
-   COUNTDOWN (Figma Glass Cards)
+   COUNTDOWN CARDS
 ================================= */
 .countdown-container {
   display: flex;
@@ -137,26 +110,22 @@ nav a:hover::after {
 }
 
 .time-box {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.2);
   padding: 25px 20px;
   border-radius: 20px;
   backdrop-filter: blur(15px);
   min-width: 110px;
-  transition: all 0.3s ease;
-  box-shadow: 
-    0 8px 32px rgba(0,0,0,0.4),
-    inset 0 0 10px rgba(255,255,255,0.05);
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .time-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  transform: translateY(-8px) scale(1.05);
 }
 
 .time-box span {
   font-size: 2.2rem;
-  font-weight: 700;
-  display: block;
+  font-weight: 800;
 }
 
 /* ===============================
@@ -168,13 +137,12 @@ nav a:hover::after {
 
 #heroImage {
   width: 260px;
-  transition: all 0.6s ease;
-  filter: drop-shadow(0 0 25px rgba(255,215,0,0.6));
+  transition: 0.6s ease;
+  filter: drop-shadow(0 0 25px rgba(255,255,255,0.6));
 }
 
 #heroImage:hover {
-  transform: scale(1.08) rotate(2deg);
-  filter: drop-shadow(0 0 60px orange);
+  transform: scale(1.1) rotate(2deg);
 }
 
 /* ===============================
@@ -198,13 +166,23 @@ nav a:hover::after {
 }
 
 /* ===============================
-   FOOTER
+   BEAUTIFUL FOOTER
 ================================= */
 footer {
   margin-top: 60px;
-  padding: 25px;
-  background: rgba(15,23,42,0.7);
-  backdrop-filter: blur(10px);
-  font-size: 0.9rem;
-  color: #94a3b8;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(255,255,255,0.1));
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255,255,255,0.3);
+  font-size: 0.95rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+footer p {
+  opacity: 0.9;
+}
+
+footer:hover {
+  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(255,255,255,0.2));
 }
