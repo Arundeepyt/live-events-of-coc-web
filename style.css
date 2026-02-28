@@ -2,203 +2,65 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:"Inter",sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
   min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#1e1b4b,#0f172a,#064e3b);
+  color:white;
+}
+
+/* Card Box */
+.hero-box{
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  padding:40px 30px;
+  border-radius:25px;
   text-align:center;
-  color:white;
-  background:#0f0f1a;
-  overflow-x:hidden;
-  position:relative;
+  width:350px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* Aurora Background */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:radial-gradient(circle at 20% 30%, #6c5ce7 0%, transparent 40%),
-             radial-gradient(circle at 80% 70%, #00cec9 0%, transparent 40%);
-  filter:blur(120px);
-  z-index:-2;
-}
-
-/* HEADER */
-header{
-  padding:80px 20px 40px;
-}
-
-.main-title{
-  font-size:3rem;
-  font-weight:800;
-  background:linear-gradient(90deg,#ffcc00,#ff6b6b);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.subtitle-animated{
-  font-size:1.3rem;
-  opacity:0.8;
-  margin-top:10px;
-}
-
-/* Animated Emojis */
-.hero-emojis{
-  margin:20px 0 10px;
-  display:flex;
-  justify-content:center;
-  gap:25px;
-}
-
-.hero-emojis span{
-  font-size:2rem;
-  animation:floatEmoji 3s ease-in-out infinite;
-  filter:drop-shadow(0 0 10px gold);
-}
-
-.hero-emojis span:nth-child(2){
-  animation-delay:0.5s;
-}
-
-.hero-emojis span:nth-child(3){
-  animation-delay:1s;
-}
-
-@keyframes floatEmoji{
-  0%{ transform:translateY(0px) scale(1); }
-  50%{ transform:translateY(-10px) scale(1.15); }
-  100%{ transform:translateY(0px) scale(1); }
-}
-
-/* NAV */
-nav{
-  margin-top:20px;
-}
-
-nav a{
-  margin:0 10px;
-  padding:10px 20px;
-  text-decoration:none;
-  color:white;
-  border-radius:30px;
-  background:rgba(255,255,255,0.08);
-  transition:0.3s;
-}
-
-nav a:hover{
-  background:#ffcc00;
-  color:black;
-}
-
-/* COUNTDOWN */
-.live-title{
-  margin-top:50px;
-}
-
-.live-badge{
-  background:red;
-  padding:5px 14px;
-  border-radius:30px;
-  font-size:0.75rem;
-  animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-  50%{transform:scale(1.15);}
-}
-
-.countdown-container{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  margin:60px 0;
-  flex-wrap:wrap;
-}
-
-.time-box{
-  background:rgba(255,255,255,0.08);
-  padding:30px;
-  border-radius:20px;
-  backdrop-filter:blur(20px);
-  min-width:120px;
-  transition:0.3s;
-}
-
-.time-box:hover{
-  transform:translateY(-6px);
-}
-
-.time-box span{
-  font-size:2.5rem;
-  font-weight:800;
-}
-
-/* HERO */
-#heroImage{
-  width:280px;
-  transition:0.6s;
-  filter:drop-shadow(0 0 20px gold);
-}
-
-#heroImage:hover{
-  transform:scale(1.08);
-}
-
-/* FOOTER */
-.modern-footer{
-  margin-top:100px;
-  padding:60px 80px 30px;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(20px);
-  border-top:1px solid rgba(255,255,255,0.15);
-}
-
-.footer-top{
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:40px;
-  text-align:left;
-}
-
-.footer-brand h3{
-  color:#ffcc00;
-  margin-bottom:10px;
-}
-
-.footer-links h4{
-  color:#00f5ff;
+/* Subtitle */
+.subtitle{
+  font-size:26px;
   margin-bottom:15px;
+  opacity:0.9;
 }
 
-.footer-links a{
-  display:block;
-  margin:8px 0;
+/* Emoji Row */
+.emoji-row{
+  margin-bottom:25px;
+}
+
+.emoji{
+  font-family: 'Noto Color Emoji', sans-serif;
+  font-size:30px;
+  margin:0 10px;
+}
+
+/* Buttons */
+.button-group{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+.button-group a{
   text-decoration:none;
+  padding:12px 22px;
+  border-radius:30px;
+  background: rgba(255,255,255,0.08);
   color:white;
-  opacity:0.8;
-  transition:0.3s;
+  font-weight:500;
+  transition:0.3s ease;
 }
 
-.footer-links a:hover{
-  color:#00f5ff;
-  transform:translateX(5px);
-}
-
-.footer-bottom{
-  margin-top:40px;
-  padding-top:20px;
-  border-top:1px solid rgba(255,255,255,0.1);
-  text-align:center;
-  font-size:0.85rem;
-  opacity:0.6;
-}
-
-@media(max-width:768px){
-  .footer-top{
-    flex-direction:column;
-    text-align:center;
-  }
+.button-group a:hover{
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-3px);
 }
