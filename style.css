@@ -1,3 +1,6 @@
+/* =========================
+   RESET
+========================= */
 *{
   margin:0;
   padding:0;
@@ -10,125 +13,110 @@ body{
   overflow-x:hidden;
   text-align:center;
   color:white;
-  background:linear-gradient(-45deg,#ff6b6b,#6c5ce7,#00cec9,#feca57);
-  background-size:400% 400%;
-  animation:gradientMove 15s ease infinite;
+  background:#0f0f1a;
   position:relative;
 }
 
-@keyframes gradientMove{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
-
-/* Glow blobs */
-body::before,
-body::after{
-  content:"";
-  position:absolute;
-  width:400px;
-  height:400px;
-  border-radius:50%;
-  filter:blur(120px);
-  z-index:-1;
-  animation:blobMove 20s infinite alternate ease-in-out;
-}
-
+/* =========================
+   Animated Aurora Background
+========================= */
 body::before{
-  background:#ff00cc;
-  top:-100px;
-  left:-100px;
-}
-
-body::after{
-  background:#00ffff;
-  bottom:-100px;
-  right:-100px;
-}
-
-@keyframes blobMove{
-  from{transform:translate(0,0) scale(1);}
-  to{transform:translate(100px,50px) scale(1.2);}
-}
-
-/* Particles */
-.particles{
+  content:"";
   position:fixed;
   inset:0;
-  pointer-events:none;
+  background:radial-gradient(circle at 20% 30%, #6c5ce7 0%, transparent 40%),
+             radial-gradient(circle at 80% 70%, #00cec9 0%, transparent 40%),
+             radial-gradient(circle at 50% 90%, #ff6b6b 0%, transparent 40%);
+  filter:blur(120px);
+  animation:auroraMove 15s ease-in-out infinite alternate;
   z-index:-2;
 }
 
-.particles span{
-  position:absolute;
-  width:8px;
-  height:8px;
-  background:white;
-  border-radius:50%;
-  opacity:0.6;
-  animation:float 15s linear infinite;
+@keyframes auroraMove{
+  from{transform:translateY(-50px) scale(1);}
+  to{transform:translateY(50px) scale(1.1);}
 }
 
-@keyframes float{
-  from{transform:translateY(100vh) scale(0.5);}
-  to{transform:translateY(-10vh) scale(1.2);}
+/* =========================
+   Subtle Tech Grid Overlay
+========================= */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size:50px 50px;
+  z-index:-1;
 }
 
+/* =========================
+   HEADER
+========================= */
 header{
-  padding:70px 20px 30px;
+  padding:80px 20px 40px;
 }
 
 .main-title{
-  font-size:3rem;
+  font-size:3.2rem;
   font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  background:linear-gradient(90deg,#00f5ff,#6c5ce7,#ff6b6b);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .subtitle-animated{
-  font-size:1.4rem;
-  background:linear-gradient(90deg,#fff,#ffeaa7,#fff);
-  background-size:200%;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:shine 3s linear infinite;
+  font-size:1.3rem;
+  opacity:0.8;
+  margin-top:10px;
 }
 
-@keyframes shine{
-  0%{background-position:0%;}
-  100%{background-position:200%;}
-}
-
+/* =========================
+   NAVIGATION
+========================= */
 nav{
-  margin-top:20px;
+  margin-top:30px;
 }
 
 nav a{
-  margin:0 15px;
+  margin:0 12px;
   text-decoration:none;
   color:white;
   font-weight:600;
-  padding:8px 15px;
-  border-radius:25px;
-  transition:0.3s;
+  padding:10px 18px;
+  border-radius:40px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s ease;
 }
 
 nav a:hover{
-  background:rgba(255,255,255,0.25);
+  background:rgba(0,255,255,0.15);
+  box-shadow:0 0 15px #00f5ff;
+  transform:translateY(-3px);
 }
 
+/* =========================
+   LIVE TITLE
+========================= */
 .live-title{
-  margin-top:50px;
-  font-size:1.6rem;
-  font-weight:600;
+  margin-top:60px;
+  font-size:1.5rem;
+  letter-spacing:1px;
 }
 
 .live-badge{
-  background:linear-gradient(45deg,#ff0000,#ff6b6b);
-  padding:6px 14px;
+  background:#ff003c;
+  padding:6px 16px;
   margin-left:12px;
   border-radius:30px;
-  font-size:0.8rem;
+  font-size:0.75rem;
   animation:pulse 1.5s infinite;
+  box-shadow:0 0 15px #ff003c;
 }
 
 @keyframes pulse{
@@ -137,45 +125,60 @@ nav a:hover{
   100%{transform:scale(1);}
 }
 
+/* =========================
+   COUNTDOWN BOXES
+========================= */
 .countdown-container{
   display:flex;
   justify-content:center;
-  gap:25px;
-  margin:50px 0;
+  gap:30px;
+  margin:60px 0;
   flex-wrap:wrap;
 }
 
 .time-box{
-  background:rgba(255,255,255,0.2);
-  padding:30px 25px;
-  border-radius:25px;
-  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,0.06);
+  padding:35px 30px;
+  border-radius:20px;
+  backdrop-filter:blur(25px);
+  border:1px solid rgba(255,255,255,0.15);
   min-width:120px;
-  transition:0.4s;
+  transition:0.4s ease;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
 .time-box:hover{
-  transform:translateY(-10px) scale(1.08);
+  transform:translateY(-8px) scale(1.05);
+  box-shadow:0 0 25px rgba(0,255,255,0.4);
 }
 
 .time-box span{
-  font-size:2.4rem;
+  font-size:2.6rem;
   font-weight:800;
+  display:block;
 }
 
+/* =========================
+   HERO IMAGE
+========================= */
 .hero-container{
   margin-top:40px;
 }
 
 #heroImage{
   width:280px;
+  filter:drop-shadow(0 0 25px rgba(0,255,255,0.6));
   transition:0.6s ease;
 }
 
 #heroImage:hover{
-  transform:scale(1.1) rotate(3deg);
+  transform:scale(1.08) rotate(2deg);
+  filter:drop-shadow(0 0 40px #00f5ff);
 }
 
+/* =========================
+   FLASH EFFECT
+========================= */
 #flash{
   position:fixed;
   inset:0;
@@ -184,19 +187,25 @@ nav a:hover{
   pointer-events:none;
 }
 
+/* =========================
+   FOOTER
+========================= */
 footer{
-  margin-top:70px;
-  padding:35px 20px;
-  background:rgba(255,255,255,0.15);
+  margin-top:80px;
+  padding:40px 20px;
+  background:rgba(255,255,255,0.05);
   backdrop-filter:blur(20px);
-  font-size:1rem;
+  border-top:1px solid rgba(255,255,255,0.1);
+  font-size:0.9rem;
+  letter-spacing:1px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 @media(max-width:768px){
 
-  .main-title{font-size:2rem;}
-  .subtitle-animated{font-size:1.1rem;}
+  .main-title{font-size:2.2rem;}
 
   nav a{
     display:inline-block;
@@ -204,21 +213,14 @@ footer{
     font-size:0.9rem;
   }
 
-  .live-title{font-size:1.2rem;}
-
   .time-box{
-    min-width:80px;
-    padding:18px 12px;
+    min-width:90px;
+    padding:20px 15px;
   }
 
-  .time-box span{font-size:1.6rem;}
+  .time-box span{font-size:1.8rem;}
 
-  #heroImage{width:180px;}
-
-  footer{
-    font-size:0.8rem;
-    padding:20px 10px;
-  }
+  #heroImage{width:200px;}
 }
 
 @media(max-width:400px){
@@ -232,5 +234,5 @@ footer{
     max-width:250px;
   }
 
-  #heroImage{width:150px;}
+  #heroImage{width:160px;}
 }
