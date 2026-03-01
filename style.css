@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -5,16 +6,18 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* BODY BACKGROUND */
 body {
   min-height: 100vh;
-  background: linear-gradient(-45deg, #05e6ff, #2515da, #04f8d7, #cc0e0e);
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1c1c1c);
   background-size: 400% 400%;
-  animation: gradientMove 10s ease infinite;
+  animation: gradientMove 12s ease infinite;
   color: white;
   text-align: center;
+  overflow-x: hidden;
 }
 
-/* Background animation */
+/* Animated Gradient */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -26,7 +29,7 @@ header {
   padding: 40px 20px;
 }
 
-/* Animated title */
+/* TITLE ANIMATION */
 .main-title {
   font-size: 2.5rem;
   margin-bottom: 15px;
@@ -42,6 +45,7 @@ header {
   display: block;
   font-size: 1.6rem;
   background: linear-gradient(90deg,#ff0000,#ff9900,#ffff00);
+  background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shine 3s linear infinite;
@@ -57,7 +61,7 @@ header {
   100% { background-position: 200%; }
 }
 
-/* NAV */
+/* NAVIGATION */
 nav {
   margin-top: 15px;
 }
@@ -72,31 +76,37 @@ nav a {
 
 nav a:hover {
   color: #00ffff;
+  transform: scale(1.1);
+}
+
+/* EVENT SECTION */
+.event-section {
+  margin-top: 40px;
 }
 
 /* LIVE TITLE */
 .live-title {
-  margin-top: 40px;
   font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
 .live-badge {
   background: red;
   color: white;
-  padding: 5px 12px;
+  padding: 6px 14px;
   margin-left: 10px;
   border-radius: 20px;
   font-size: 0.9rem;
   animation: blink 1s infinite;
 }
 
-/* Blinking red */
+/* Blinking effect */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
 }
 
-/* COUNTDOWN */
+/* COUNTDOWN BOXES */
 .countdown-container {
   display: flex;
   justify-content: center;
@@ -109,18 +119,25 @@ nav a:hover {
   background: rgba(255,255,255,0.1);
   padding: 20px;
   border-radius: 15px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   min-width: 100px;
   transition: 0.3s;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
 }
 
 .time-box:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 30px gold;
 }
 
 .time-box span {
   font-size: 2rem;
   font-weight: bold;
+}
+
+.time-box p {
+  font-size: 0.9rem;
+  margin-top: 5px;
 }
 
 /* HERO IMAGE */
@@ -129,15 +146,47 @@ nav a:hover {
 }
 
 #heroImage {
-  width: 250px;
-  opacity: 0.9;
+  width: 260px;
   transition: 0.8s ease;
   filter: drop-shadow(0 0 20px gold);
 }
 
-#heroImage:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 50px orange);
+/* HERO POWER MODE */
+.hero-power {
+  transform: scale(1.2);
+  animation: heroGlow 1.5s ease infinite alternate;
+}
+
+@keyframes heroGlow {
+  0% {
+    filter: drop-shadow(0 0 20px gold);
+  }
+  100% {
+    filter: drop-shadow(0 0 80px red);
+  }
+}
+
+/* POPUP ARRIVAL */
+.arrival-popup {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  animation: popupScale 0.8s ease forwards;
+  text-shadow: 0 0 20px gold, 0 0 40px orange;
+}
+
+@keyframes popupScale {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* FLASH EFFECT */
@@ -153,11 +202,14 @@ nav a:hover {
 }
 
 #flash.active {
-  animation: flashEffect 1s ease;
+  animation: lightning 1s ease;
 }
 
-@keyframes flashEffect {
+@keyframes lightning {
   0% { opacity: 1; }
+  20% { opacity: 0; }
+  40% { opacity: 1; }
+  60% { opacity: 0; }
   100% { opacity: 0; }
 }
 
@@ -166,4 +218,12 @@ footer {
   margin-top: 50px;
   padding: 20px;
   background: rgba(0,0,0,0.4);
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .main-title { font-size: 2rem; }
+  .countdown-container { gap: 10px; }
+  #heroImage { width: 200px; }
 }
