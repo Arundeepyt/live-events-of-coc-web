@@ -2,7 +2,7 @@ console.log("Script Loaded Successfully");
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // target: tomorrow at 08:00 local time
+    // target: today at 03:00pm local time
     const now = new Date();
     const target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 8, 0, 0, 0);
     const targetDate = target.getTime();
