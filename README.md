@@ -23,6 +23,8 @@ This project showcases a gaming-style UI built using pure HTML and CSS with adva
 - 🔗 Official Clash of Clans page links
 - ⚠️ Professional disclaimer included
 
+updats on live events
+
 ---
 
 ## 🛠️ Technologies Used
